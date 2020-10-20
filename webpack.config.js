@@ -17,8 +17,20 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                test: /\.(less|css)$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                localIdentName: "[local]___[hash:base64:5]",
+                                mode: "global"
+                            }
+                        }
+                    },
+                    "less-loader"
+                ]
             },
             {
                 test: /\.(eot|svg|otf|ttf|woff|woff2|jpg|png|jpeg)$/,

@@ -31,7 +31,7 @@ import {
 } from "./styles";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import noImage from "../../images/noImage.jpg";
+import noImage from "../images/noImage.jpg";
 
 function MovieView(props) {
     const [rating, setRating] = useState(0);

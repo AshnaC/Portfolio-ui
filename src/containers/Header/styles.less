@@ -1,0 +1,117 @@
+:local {
+    .menu_item {
+        color: #bababa;
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 1px;
+        outline: none;
+        padding: 12px 0;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .menu_item:hover {
+        color: #fff;
+    }
+
+    .header {
+        height: 45px;
+    }
+
+    .header_tab {
+        height: 45px;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .menu_heading {
+        padding-bottom: 25px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .menu_icon {
+        font-size: 22px;
+        padding-right: 15px;
+    }
+}
+
+:global {
+    /* Position and sizing of burger button */
+    .bm-burger-button {
+        z-index: 1000;
+        position: fixed;
+        width: 30px;
+        left: 20px;
+        top: 15px;
+        height: 17px;
+        font-size: 18px;
+        cursor: pointer;
+        color: rgb(0, 160, 209);
+        button {
+            outline: none;
+        }
+    }
+
+    /* Color/shape of burger icon bars */
+    .bm-burger-bars {
+        background: rgb(0, 160, 209);
+    }
+
+    /* Color/shape of burger icon bars on hover*/
+    .bm-burger-bars-hover {
+        background: #a90000;
+    }
+
+    /* Position and sizing of clickable cross button */
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+        display: none;
+    }
+
+    /* Color/shape of close button cross */
+    .bm-cross {
+        background: #bdc3c7;
+    }
+
+    /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+    }
+
+    /* General sidebar styles */
+    .bm-menu {
+        background: #333;
+        padding: 25px;
+    }
+
+    /* Morph shape necessary with bubble or elastic */
+    .bm-morph-shape {
+        fill: #373a47;
+    }
+
+    /* Wrapper for item list */
+    .bm-item-list {
+        color: #b8b7ad;
+    }
+
+    /* Individual item */
+    .bm-item {
+        outline: none;
+    }
+
+    /* Styling of overlay */
+    .bm-overlay {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}

@@ -1,35 +1,27 @@
 import styled from "styled-components";
 
 export const Poster = styled.img`
-    height: 240px;
-    width: 160px;
+    // height: 240px;
+    width: 40%;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
 `;
 
-export const MovieDetail = styled.div`
-    height: 240px;
-    width: 240px;
-`;
+export const MovieDetail = styled.div``;
 
 export const MovieCard = styled.div`
-    width: 400px;
+    min-height: 240px;
     border: 1px solid #dedede;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: flex-start;
-    margin: 15px;
     background: #fff;
     cursor: pointer;
 `;
 
 export const MovieListWrapper = styled.div`
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    &:after {
-        content: "";
-        width: 400px;
-    }
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: 3rem;
 `;
 
 export const Header = styled.div`
@@ -64,6 +56,6 @@ export const Heading = styled.div`
     font-weight: bold;
     font-style: italic;
     font-size: 20px;
-    padding-left: 15px;
+    padding-bottom: 10px;
     color: grey;
 `;

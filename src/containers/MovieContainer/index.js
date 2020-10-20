@@ -17,7 +17,7 @@ import { useSelector, useDispatch, shallowEqual } from "react-redux";
 
 import getStateSelector from "./selectors";
 
-import ExplorerLayout from "../../components/ExplorerLayout";
+import ExplorerLayout from "../../components/movie/ExplorerLayout";
 
 export default function MovieContainer() {
     const dispatch = useDispatch();

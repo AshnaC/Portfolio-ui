@@ -17,7 +17,7 @@ import {
     MovieListWrapper
 } from "./styles";
 
-import noImage from "../../images/noImage.jpg";
+import noImage from "../images/noImage.jpg";
 
 function MovieLister(props) {
     const { getSimilarMovies, movies, setSelectedMovie } = props;
@@ -35,8 +35,9 @@ function MovieLister(props) {
                 {movies.map(item => (
                     <MovieCard key={item.movieIndex} onClick={onMovieClick(item)}>
                         <Poster
-                            src={`https://image.tmdb.org/t/p/w500/${item.poster_path ||
-                                item.backdrop_path}`}
+                            src={`https://image.tmdb.org/t/p/w500/${
+                                item.poster_path || item.backdrop_path
+                            }`}
                             onError={e => {
                                 e.target.src = noImage;
                                 e.target.onerror = "";
