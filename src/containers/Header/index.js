@@ -1,11 +1,17 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import styles from "./styles.less";
+import { menuItems } from "../../constants";
 
 export default function App() {
+    const heading = () => {
+        let pathName = window.location.pathname;
+        if (pathName == "/") pathName = "/movie";
+        return menuItems.find(elt => elt.path == pathName).name;
+    };
     return (
         <div className={styles.header}>
-            <div className={styles.header_tab} is />
+            <div className={styles.header_tab}>{heading()}</div>
             <Menu width={310}>
                 <div className={styles.menu_heading}>Ashna's Projects</div>
                 {menuItems.map(item => {
@@ -20,16 +26,3 @@ export default function App() {
         </div>
     );
 }
-
-const menuItems = [
-    {
-        id: "RECOMMENDER",
-        path: "/movie",
-        name: "Movie Explorer"
-    },
-    {
-        id: "falcone",
-        path: "/falcone",
-        name: "Finding Falcone"
-    }
-];

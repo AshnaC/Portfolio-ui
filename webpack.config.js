@@ -35,6 +35,16 @@ module.exports = {
             {
                 test: /\.(eot|svg|otf|ttf|woff|woff2|jpg|png|jpeg)$/,
                 use: "file-loader"
+            },
+            {
+                test: /\.(html)$/,
+                include: [path.resolve(__dirname, "src/html")],
+                use: {
+                    loader: "html-loader",
+                    options: {
+                        // attrs: [":data-src"]
+                    }
+                }
             }
         ]
     },

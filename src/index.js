@@ -6,6 +6,7 @@ import "babel-polyfill";
 import "sanitize.css";
 import WebFont from "webfontloader";
 import "font-awesome/css/font-awesome.min.css";
+import "./global.css";
 
 import store from "./store/configureStore";
 import App from "./containers/App";
