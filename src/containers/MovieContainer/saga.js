@@ -25,7 +25,7 @@ function* getPopularMovies() {
 
 function* getMoviesDetails(action) {
     const { movies } = action;
-    yield* movies.map(function*(elt) {
+    yield* movies.map(function* (elt) {
         yield spawn(getMovieDetails, elt);
     });
 }

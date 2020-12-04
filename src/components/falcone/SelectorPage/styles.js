@@ -36,7 +36,7 @@ export const Button = styled.div`
   ${props => !props.enabled && "opacity: 0.4;"}
   cursor: ${props => (props.enabled ? "pointer" : "default")};
   color: #FFF;
-  font-sizd:14px;
+  font-size:16px;
   font-weight:bold;
   margin:auto;
   margin-bottom: 10px;

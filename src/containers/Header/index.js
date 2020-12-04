@@ -7,6 +7,10 @@ export default function App() {
     const heading = () => {
         let pathName = window.location.pathname;
         if (pathName == "/") pathName = "/movie";
+        if (pathName == "/jpn") {
+            const menuId = new URLSearchParams(window.location.search).get('page');
+            return menuItems.find(elt => elt.id == menuId).name;
+        }
         return menuItems.find(elt => elt.path == pathName).name;
     };
     return (
