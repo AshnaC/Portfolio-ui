@@ -69,7 +69,7 @@ export default function App() {
                     })}
                 </div>
             )}
-            {imageFile && (``
+            {imageFile && (
                 <div className={styles.image_wrapper}>
                     <img className={styles.image_container} src={URL.createObjectURL(imageFile)} />
                 </div>
