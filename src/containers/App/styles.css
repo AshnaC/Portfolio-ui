@@ -1,8 +1,11 @@
 .menu_item {
-    display: block;
-    color: #b8b7ad;
-    padding: 0.8em;
+    color: #bababa;
     text-decoration: none;
-    font-size: 22px;
-    letter-spacing: 0.8px;
+    font-size: 17px;
+    letter-spacing: 0.7px;
+    outline: none;
+    padding: 12px 0;
+    display: flex !important;
+    align-items: center;
+    font-style: italic;
 }

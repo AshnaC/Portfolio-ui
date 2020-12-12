@@ -8,7 +8,7 @@ export default function App() {
         let pathName = window.location.pathname;
         if (pathName == "/") pathName = "/movie";
         if (pathName == "/jpn") {
-            const menuId = new URLSearchParams(window.location.search).get('page');
+            const menuId = new URLSearchParams(window.location.search).get("page");
             return menuItems.find(elt => elt.id == menuId).name;
         }
         return menuItems.find(elt => elt.path == pathName).name;
@@ -16,8 +16,8 @@ export default function App() {
     return (
         <div className={styles.header}>
             <div className={styles.header_tab}>{heading()}</div>
-            <Menu width={310}>
-                <div className={styles.menu_heading}>Ashna's Projects</div>
+            <Menu width={400}>
+                <div className={styles.menu_heading}>PROJECTS</div>
                 {menuItems.map(item => {
                     return (
                         <a key={item.id} id={item.id} className={styles.menu_item} href={item.path}>

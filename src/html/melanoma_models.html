@@ -14464,47 +14464,9 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataset = MelanomaDataset(train[0:100],0.5, 0.5, full_transform = False)</span>
-<span class="c1"># dataloader = DataLoader(dataset,batch_size=3, shuffle=False)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sample_csv =None</span>
-<span class="c1"># sample_images = None</span>
-<span class="c1"># sample_labels = None</span>
-<span class="c1"># for (images, csv_data), labels in dataloader:</span>
-<span class="c1">#     sample_csv = csv_data </span>
-<span class="c1">#     sample_images = images</span>
-<span class="c1">#     sample_labels = torch.tensor(labels, dtype=torch.float32)</span>
-<span class="c1">#     print(&#39;images&#39;,images.shape)</span>
-<span class="c1">#     print(&#39;csv_data&#39;,csv_data.shape)</span>
-<span class="c1">#     print(&#39;label&#39;,labels)</span>
-
-  
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
@@ -14550,36 +14512,11 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sample_resenet = Resnet50Netwrok()</span>
-<span class="c1"># sample_out = sample_resenet(sample_images,sample_csv )</span>
-</pre></div>
-
-     </div>
-</div>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # Criterion example</span>
-<span class="c1"># criterion_example = nn.BCEWithLogitsLoss()</span>
-<span class="c1"># # Unsqueeze(1) from shape=[3] to shape=[3, 1]</span>
-<span class="c1"># loss = criterion_example(sample_out, sample_labels.unsqueeze(1))   </span>
-<span class="c1"># print(&#39;Loss:&#39;, loss)</span>
-</pre></div>
-
-     </div>
 </div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
@@ -14668,56 +14605,15 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sample_effnet = EfficientNetwork(&quot;b2&quot;)</span>
-<span class="c1"># sample_eff_out = sample_effnet(sample_images,sample_csv )</span>
-</pre></div>
 
-     </div>
-</div>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # Criterion example</span>
-<span class="c1"># criterion_example = nn.BCEWithLogitsLoss()</span>
-<span class="c1"># # Unsqueeze(1) from shape=[3] to shape=[3, 1]</span>
-<span class="c1"># loss = criterion_example(sample_eff_out, sample_labels.unsqueeze(1))   </span>
-<span class="c1"># print(&#39;Loss:&#39;, loss)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># epochs = 15</span>
-<span class="c1"># patience = 3</span>
-<span class="c1"># TTA = 3</span>
-<span class="c1"># num_workers = 8</span>
-<span class="c1"># learning_rate = 0.0005</span>
-<span class="c1"># weight_decay = 0.0</span>
-<span class="c1"># lr_patience = 1            # 1 model not improving until lr is decreasing</span>
-<span class="c1"># lr_factor = 0.4            # by how much the lr is decreasing</span>
-
-<span class="c1"># batch_size1 = 32</span>
-<span class="c1"># batch_size2 = 16</span>
-</pre></div>
-
-     </div>
-</div>
 </div>
 </div>
 
@@ -14888,17 +14784,6 @@ a.anchor-link {
 <span class="n">fold_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">folds</span><span class="p">)</span>
 <span class="n">trainData</span><span class="p">(</span><span class="n">fold_list</span><span class="p">,</span><span class="s2">&quot;b4&quot;</span><span class="p">)</span>
 
-<span class="c1"># a = train_df[1:1000]</span>
-<span class="c1"># sample_groups = a[&#39;patient_id&#39;]</span>
-<span class="c1"># X = np.zeros(len(a))</span>
-<span class="c1"># y= a[&#39;target&#39;]</span>
-<span class="c1"># sample_group_kfold = StratifiedKFold(n_splits=6,shuffle= True)</span>
-<span class="c1"># sample_folds = sample_group_kfold.split(X, y, sample_groups)</span>
-<span class="c1"># # To have multiple iterations</span>
-<span class="c1"># sample_fold_list = list(sample_folds)</span>
-
-<span class="c1"># # sample_model = EfficientNetwork(&quot;b2&quot;).to(device)</span>
-<span class="c1"># trainData(sample_fold_list,&quot;b2&quot;)</span>
 </pre></div>
 
      </div>
@@ -14922,17 +14807,6 @@ a.anchor-link {
 <span class="n">trainData</span><span class="p">(</span><span class="n">fold_list</span><span class="p">,</span><span class="s2">&quot;res&quot;</span><span class="p">)</span>
 
 
-<span class="c1"># a = train[0:1000]</span>
-<span class="c1"># sample_groups = a[&#39;patient_id&#39;]</span>
-<span class="c1"># X = np.zeros(len(a))</span>
-<span class="c1"># y= a[&#39;target&#39;]</span>
-<span class="c1"># sample_group_kfold = GroupKFold(n_splits=5)</span>
-<span class="c1"># sample_folds = sample_group_kfold.split(X, y, sample_groups)</span>
-<span class="c1"># # To have multiple iterations</span>
-<span class="c1"># sample_fold_list = list(sample_folds)</span>
-
-<span class="c1"># # sample_model = Resnet50Netwrok().to(device)</span>
-<span class="c1"># trainData(sample_fold_list,&quot;res&quot;)</span>
 </pre></div>
 
      </div>

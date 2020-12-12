@@ -5,6 +5,11 @@ export const menuItems = [
         name: "Movie Explorer"
     },
     {
+        id: "face-recognition",
+        path: "/face",
+        name: "Face Recognition"
+    },
+    {
         id: "covid_eda",
         path: "/jpn?page=covid_eda",
         name: "Covid-19 EDA"
@@ -12,13 +17,14 @@ export const menuItems = [
     {
         id: "related_articles",
         path: "/jpn?page=related_articles",
-        name: "COVID Related Articles Clustering"
+        name: "Covid Related Articles Clustering"
     },
-    {
-        id: "face_recog",
-        path: "/jpn?page=face_recog",
-        name: "Face Recognition"
-    },
+
+    // {
+    //     id: "face_recog",
+    //     path: "/jpn?page=face_recog",
+    //     name: "Face Recognition"
+    // },
     {
         id: "melanoma",
         path: "/jpn?page=melanoma",
@@ -34,16 +40,16 @@ export const menuItems = [
         path: "/jpn?page=big_market",
         name: "Big Market Sales"
     },
-    // {
-    //     id: "walmart_eda",
-    //     path: "/jpn?page=walmart_eda",
-    //     name: "Walmart Sales EDA-1"
-    // },
-    // {
-    //     id: "walmart_eda-1",
-    //     path: "/jpn?page=walmart_eda-1",
-    //     name: "Walmart Sales EDA-2"
-    // },
+    {
+        id: "walmart_eda",
+        path: "/jpn?page=walmart_eda",
+        name: "Walmart Sales EDA-1"
+    },
+    {
+        id: "walmart_eda-1",
+        path: "/jpn?page=walmart_eda-1",
+        name: "Walmart Sales EDA-2"
+    },
     {
         id: "walmart_time_series",
         path: "/jpn?page=walmart_time_series",
@@ -58,11 +64,6 @@ export const menuItems = [
         id: "titanic",
         path: "/jpn?page=titanic",
         name: "Titanic Survival Prediction"
-    },
-    {
-        id: "face-recognition",
-        path: "/face",
-        name: "Face Recognition"
     }
     // {
     //     id: "falcone",
