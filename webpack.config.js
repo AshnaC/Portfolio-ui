@@ -13,7 +13,7 @@ module.exports = {
                 loader: "babel-loader",
                 options: {
                     presets: ["@babel/preset-env", "@babel/preset-react"],
-                    plugins: [["@babel/plugin-proposal-class-properties"]]
+                    plugins: [["@babel/plugin-proposal-class-properties"], "dynamic-import-webpack"]
                 }
             },
             {
@@ -52,7 +52,15 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "./",
-        filename: "bundle.js"
+        filename: "[name].bundle.js",
+        chunkFilename: "[name].bundle.js"
+    },
+    optimization: {
+        minimize: true,
+
+        splitChunks: {
+            chunks: "all"
+        }
     },
     devServer: {
         publicPath: "/",
@@ -71,7 +79,20 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve("./public/index.html")
+            template: path.resolve("./public/index.html"),
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true
+            },
+            inject: true
         })
     ]
 };
