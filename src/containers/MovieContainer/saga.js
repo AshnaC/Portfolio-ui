@@ -54,7 +54,6 @@ function* getRecommendedMovies(action) {
         const { movieIndex } = action;
         let recommendedMovies = yield fetchApi(`api/recommendedMovies/${movieIndex}`);
         recommendedMovies = recommendedMovies.filter(elt => elt.tmdbId);
-        debugger;
         yield put(setRecommendedMovies(recommendedMovies));
     } catch (err) {}
 }

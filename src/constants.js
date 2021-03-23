@@ -64,10 +64,15 @@ export const menuItems = [
         id: "titanic",
         path: "/jpn?page=titanic",
         name: "Titanic Survival Prediction"
+    },
+    {
+        id: "funds",
+        path: "/funds",
+        name: "Mutual Fund Explorer"
+    },
+    {
+        id: "falcone",
+        path: "/falcone",
+        name: "Finding Falcone"
     }
-    // {
-    //     id: "falcone",
-    //     path: "/falcone",
-    //     name: "Finding Falcone"
-    // },
 ];

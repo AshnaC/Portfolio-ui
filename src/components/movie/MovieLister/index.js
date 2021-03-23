@@ -46,7 +46,7 @@ function MovieLister(props) {
                         <MovieDetail>
                             <Header>
                                 <MovieName>{item.title}</MovieName>
-                                <Rating>Rating:{item.vote_average || 0 * 10}%</Rating>
+                                <Rating>Rating:{(item.vote_average || 0) * 10}%</Rating>
                             </Header>
                             <Description>{item.overview}</Description>
                         </MovieDetail>

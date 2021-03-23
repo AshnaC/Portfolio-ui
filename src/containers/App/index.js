@@ -5,6 +5,8 @@ import { slide as Menu } from "react-burger-menu";
 import MovieContainer from "../MovieContainer";
 import GetResources from "../GetResources";
 import FaceRecognition from "../FaceRecognition";
+import FundContainer from "../FundContainer";
+
 import HtmlRenderer from "../../components/HTMLRenderer";
 
 import Header from "../Header";
@@ -19,6 +21,7 @@ export default function App() {
                 <Route exact path="/" component={MovieContainer} />
                 <Route exact path="/jpn" component={HtmlRenderer} />
                 <Route exact path="/face" component={FaceRecognition} />
+                <Route exact path="/funds" component={FundContainer} />
             </Switch>
         </div>
     );
